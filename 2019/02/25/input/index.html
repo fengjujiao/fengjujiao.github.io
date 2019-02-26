@@ -11,16 +11,16 @@
   <meta name="description" content="像上面的事例，之前看了许多input的button的对齐的方法，感觉都太复杂，各种定位浮动，代码有点儿冗余，这里我介绍一种比较简单的对齐方法。 html内容:1234&amp;lt;div class=&quot;search&quot;&amp;gt;   &amp;lt;input type=&quot;text&quot;&amp;gt;   &amp;lt;button&amp;gt;搜索&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; css内容:123456789">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于input框和button的对齐">
-<meta property="og:url" content="/2019/02/25/input/index.html">
+<meta property="og:url" content="https://fengjujiao.github.io/2019/02/25/input/index.html">
 <meta property="og:site_name" content="不安于命的博客">
 <meta property="og:description" content="像上面的事例，之前看了许多input的button的对齐的方法，感觉都太复杂，各种定位浮动，代码有点儿冗余，这里我介绍一种比较简单的对齐方法。 html内容:1234&amp;lt;div class=&quot;search&quot;&amp;gt;   &amp;lt;input type=&quot;text&quot;&amp;gt;   &amp;lt;button&amp;gt;搜索&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; css内容:123456789">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="/25/input/input.png">
+<meta property="og:image" content="https://fengjujiao.github.io/2019/02/25/input/input.png">
 <meta property="og:updated_time" content="2019-02-25T14:22:34.928Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于input框和button的对齐">
 <meta name="twitter:description" content="像上面的事例，之前看了许多input的button的对齐的方法，感觉都太复杂，各种定位浮动，代码有点儿冗余，这里我介绍一种比较简单的对齐方法。 html内容:1234&amp;lt;div class=&quot;search&quot;&amp;gt;   &amp;lt;input type=&quot;text&quot;&amp;gt;   &amp;lt;button&amp;gt;搜索&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; css内容:123456789">
-<meta name="twitter:image" content="/25/input/input.png">
+<meta name="twitter:image" content="https://fengjujiao.github.io/2019/02/25/input/input.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -128,7 +128,7 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p><img src="/25/input/input.png" alt="input框"></p>
+            <p><img src="/2019/02/25/input/input.png" alt="input框"></p>
 <p>像上面的事例，之前看了许多input的button的对齐的方法，感觉都太复杂，各种定位浮动，代码有点儿冗余，这里我介绍一种比较简单的对齐方法。</p>
 <h5 id="html内容"><a href="#html内容" class="headerlink" title="html内容:"></a>html内容:</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"search"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">button</span>&gt;</span>搜索<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h5 id="css内容"><a href="#css内容" class="headerlink" title="css内容:"></a>css内容:</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.search</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.search</span> <span class="selector-tag">input</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>:border-box;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#d3d3d3</span>;</span><br><span class="line">    <span class="attribute">ouline</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.search</span> <span class="selector-tag">button</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">border</span>:none;</span><br><span class="line">    <span class="attribute">vertical-align</span>:top;</span><br><span class="line">    <span class="attribute">outline</span>:none;</span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#67cdd4</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.search</span> <span class="selector-tag">input</span><span class="selector-pseudo">:focus</span>&#123;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#67cdd4</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -137,9 +137,9 @@
             <div class="post-copyright">
     <div class="content">
         <p>最后更新： 2019年02月25日 22:22</p>
-        <p>原始链接： <a class="post-url" href="/2019/02/25/input/" title="关于input框和button的对齐">/2019/02/25/input/</a></p>
+        <p>原始链接： <a class="post-url" href="/2019/02/25/input/" title="关于input框和button的对齐">https://fengjujiao.github.io/2019/02/25/input/</a></p>
         <footer>
-            <a href>
+            <a href="https://fengjujiao.github.io">
                 <img src="/images/logo.png" alt="慕少">
                 慕少
             </a>
@@ -163,7 +163,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/02/25/input/&title=《关于input框和button的对齐》 — 不安于命的博客&pic=images/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengjujiao.github.io/2019/02/25/input/&title=《关于input框和button的对齐》 — 不安于命的博客&pic=https://fengjujiao.github.ioimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -173,22 +173,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/02/25/input/&title=《关于input框和button的对齐》 — 不安于命的博客&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengjujiao.github.io/2019/02/25/input/&title=《关于input框和button的对齐》 — 不安于命的博客&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/02/25/input/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://fengjujiao.github.io/2019/02/25/input/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于input框和button的对齐》 — 不安于命的博客&url=/2019/02/25/input/&via=" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于input框和button的对齐》 — 不安于命的博客&url=https://fengjujiao.github.io/2019/02/25/input/&via=https://fengjujiao.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/02/25/input/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://fengjujiao.github.io/2019/02/25/input/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -198,7 +198,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/02/25/input/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://fengjujiao.github.io/2019/02/25/input/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -263,7 +263,7 @@
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
   var mihoConfig = {
-      root: "",
+      root: "https://fengjujiao.github.io",
       animate: true,
       isHome: false,
       share: true,
