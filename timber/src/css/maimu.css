@@ -1,0 +1,86 @@
+.maimu-img{
+    height: 400px;
+    width: 100%;
+}
+ .process-div img,.maimu-img img{
+    width: 100%;
+    height: 100%;
+}
+.process{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.process-div{
+    width: 16%;
+    height: 240px;
+    padding: 0 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 3px 3px #b8b7b7;
+}
+.process-div>div{
+    margin: 0 auto;
+}
+.top{
+    width: 25px;
+    height: 6px;
+    margin: 0 auto;
+    background: #4CCC3B;
+}
+.process-img{
+    width: 110px;
+    height: 100px;
+    padding: 15px;
+}
+.process-text{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #999999;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.apply{
+    padding:35px;
+    text-align: center;
+    background: #F9F9F9;
+}
+.apply-p{
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.round{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.round>div{
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 50%;
+    border: 1px solid #000000;
+}
+.apply-btn{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.apply-btn button{
+    padding: 7px 30px;
+    background: #4CCC3B;
+    color: #ffffff;
+    border-radius: 3px;
+}
