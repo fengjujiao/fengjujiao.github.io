@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Vue常用语法(篇4) | 不安于命的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="博客，不安于命">
+  
+  <meta name="description" content="一、路由1.安装 npm i -S vue-router安装完之后，我们可以在src/router/index.js,进行相应的配置。123456789101112131415161718192021222324252627282930313233343536// 1. 引入vueimport Vue from &apos;vue&apos;// 2. 引入路由import Router from &apos;vue-rout">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue常用语法(篇4)">
+<meta property="og:url" content="https://fengjujiao.github.io/2019/04/25/vue/Vue04/index.html">
+<meta property="og:site_name" content="不安于命的博客">
+<meta property="og:description" content="一、路由1.安装 npm i -S vue-router安装完之后，我们可以在src/router/index.js,进行相应的配置。123456789101112131415161718192021222324252627282930313233343536// 1. 引入vueimport Vue from &apos;vue&apos;// 2. 引入路由import Router from &apos;vue-rout">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-14T10:12:06.754Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue常用语法(篇4)">
+<meta name="twitter:description" content="一、路由1.安装 npm i -S vue-router安装完之后，我们可以在src/router/index.js,进行相应的配置。123456789101112131415161718192021222324252627282930313233343536// 1. 引入vueimport Vue from &apos;vue&apos;// 2. 引入路由import Router from &apos;vue-rout">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">不安于命</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>档案</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        不安于命
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个前端爱好者
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-vue/Vue04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Vue常用语法(篇4)
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Vue常用语法/">Vue常用语法</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-04-25
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h2 id="一、路由"><a href="#一、路由" class="headerlink" title="一、路由"></a>一、路由</h2><h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h4><blockquote>
+<p>npm i -S vue-router<br>安装完之后，我们可以在src/router/index.js,进行相应的配置。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// 1. 引入vue</span><br><span class="line">import Vue from 'vue'</span><br><span class="line">// 2. 引入路由</span><br><span class="line">import Router from 'vue-router'</span><br><span class="line">// 3. 引入页面</span><br><span class="line">import Home   from '@/components/home/home.vue'</span><br><span class="line">import News   from '@/components/news/news.vue'</span><br><span class="line">import Social from '@/components/social/social.vue'</span><br><span class="line">import About  from '@/components/about/about.vue'</span><br><span class="line">// 4. 安装路由</span><br><span class="line">Vue.use(Router)</span><br><span class="line">// 5. 配置路由</span><br><span class="line">export default new Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: '/',      // 路由访问路径，‘/’表示当前目录</span><br><span class="line">      name: 'home',   // 路由名称，传递数据时有用</span><br><span class="line">      component: Home // 路由指向的组件</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: '/news',</span><br><span class="line">      name: 'news',</span><br><span class="line">      component: News</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: '/social',</span><br><span class="line">      name: 'social',</span><br><span class="line">      component: Social</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      path: '/about',</span><br><span class="line">      name: 'about',</span><br><span class="line">      component: About</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>-&gt; ./src/main.js<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 1. 引入 vue</span><br><span class="line">import Vue from 'vue'</span><br><span class="line">// 2. 引入 App 组件</span><br><span class="line">import App from './App'</span><br><span class="line">// 3. 引入router，无需指定 index.js，默认加载</span><br><span class="line">import router from './router'</span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = false</span><br><span class="line">/* eslint-disable no-new */</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: '#app',</span><br><span class="line">  // 4. 注入router</span><br><span class="line">  router,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: '<span class="tag">&lt;<span class="name">App</span>/&gt;</span>'</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>-&gt; ./src/App.vue<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由导航/可单独设置成一个组件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tabBar"</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 使用 router-link 组件来导航. --&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 通过传入to属性指定链接. --&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- &lt;router-link&gt; 默认会被渲染成一个&lt;a&gt;标签 --&gt;</span></span><br><span class="line">     	<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">class</span>=<span class="string">"tabBar-item"</span> <span class="attr">:to</span>=<span class="string">"links.home"</span>&gt;</span>主页<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">class</span>=<span class="string">"tabBar-item"</span> <span class="attr">:to</span>=<span class="string">"links.news"</span>&gt;</span>新闻<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">class</span>=<span class="string">"tabBar-item"</span> <span class="attr">:to</span>=<span class="string">"links.about"</span>&gt;</span>关于<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">router-link</span> <span class="attr">class</span>=<span class="string">"tabBar-item"</span> <span class="attr">:to</span>=<span class="string">"links.social"</span>&gt;</span>社会<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">&lt;!-- 路由出口 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  name: <span class="string">"App"</span>,</span></span><br><span class="line"><span class="undefined">  data() &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      links: &#123;<span class="string">"home"</span>:<span class="string">"/"</span>,<span class="string">"news"</span>:<span class="string">"/news"</span>,<span class="string">"about"</span>:<span class="string">"/about"</span>,<span class="string">"social"</span>:<span class="string">"/social"</span>&#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  components: &#123;&#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-id">#app</span> &#123;</span></span><br><span class="line"><span class="undefined">  font-family: 'Avenir', Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="undefined">  -webkit-font-smoothing: antialiased;</span></span><br><span class="line"><span class="undefined">  -moz-osx-font-smoothing: grayscale;</span></span><br><span class="line"><span class="undefined">  margin-top: 60px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">a &#123;</span></span><br><span class="line"><span class="undefined">  text-decoration: none;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.tabBar-item</span> &#123;</span></span><br><span class="line"><span class="undefined">  display: inline-block;</span></span><br><span class="line"><span class="undefined">  color: purple;</span></span><br><span class="line"><span class="undefined">  cursor: pointer;</span></span><br><span class="line"><span class="undefined">  margin-right: 12px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-class">.tabBar-item</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="undefined">  text-decoration: underline;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">  </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Axios"><a href="#Axios" class="headerlink" title="Axios"></a>Axios</h2><p>Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。通俗的讲，其实就是一个数据请求，类似于ajax。</p>
+<h4 id="1-安装-1"><a href="#1-安装-1" class="headerlink" title="1.安装"></a>1.安装</h4><blockquote>
+<p>npm i -S axios</p>
+</blockquote>
+<h4 id="在main-js中引入"><a href="#在main-js中引入" class="headerlink" title="在main.js中引入"></a>在main.js中引入</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入axios</span></span><br><span class="line"><span class="keyword">import</span> Axios <span class="keyword">from</span> <span class="string">'axios'</span></span><br><span class="line"><span class="comment">// 将axios挂载到Vue上</span></span><br><span class="line">Vue.prototype.$axios = Axios</span><br></pre></td></tr></table></figure>
+<p>接下里我们就可以在组件里面进行请求了，一般请求放在cerated或者methods里面。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">created()&#123;</span><br><span class="line">    <span class="keyword">this</span>.$axios.get(<span class="string">'url'</span>, &#123;</span><br><span class="line">      params: &#123;</span><br><span class="line">        <span class="comment">// get 参数可放置于此字段中，key-value对形式设置</span></span><br><span class="line">        <span class="comment">// 一般建议这么做，便于控制</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(res)</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">methods:&#123;</span><br><span class="line">    <span class="keyword">async</span> search()&#123; <span class="comment">//异步请求</span></span><br><span class="line">      <span class="keyword">let</span> url=<span class="string">''</span></span><br><span class="line">      <span class="keyword">let</span> params=&#123;&#125;</span><br><span class="line">      <span class="keyword">let</span> data=<span class="keyword">await</span> <span class="keyword">this</span>.$axios.get(url,params)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Vuex（状态管理）"><a href="#Vuex（状态管理）" class="headerlink" title="Vuex（状态管理）"></a>Vuex（状态管理）</h2><p>View -&gt; （Dispatch）Action -&gt; （Commit）Mutations -&gt; （Mutate）state -&gt; View</p>
+<h4 id="1-安装-2"><a href="#1-安装-2" class="headerlink" title="1.安装"></a>1.安装</h4><blockquote>
+<p> npm i -S vuex<br>-&gt; ./src/store/index.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue  <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Vuex)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>安装 Vuex 之后，让我们来创建一个 store,并在里面新建一个index.js，进行如下配置。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">      msg: <span class="string">"Hello, VueX"</span>,</span><br><span class="line">      username: <span class="string">"admin"</span>,</span><br><span class="line">      num: <span class="number">10</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">      realName(state,data)&#123;</span><br><span class="line">          state.msg=data</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;，</span><br><span class="line">  actions: &#123;</span><br><span class="line">      <span class="comment">// context: 承上启下/上下文</span></span><br><span class="line">      realName(context,data) &#123;</span><br><span class="line">        context.commit(<span class="string">'increment'</span>,data);</span><br><span class="line">      &#125;</span><br><span class="line">    <span class="comment">//  或者这种写法也是一样的</span></span><br><span class="line">    realName (&#123;commit&#125;, data) &#123; <span class="comment">// 检查登录</span></span><br><span class="line">        commit(<span class="string">'realName'</span>, data)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>注意：一定要在将store注入到vue实例中，如下所示：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./Store'</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  store,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: <span class="string">'&lt;App/&gt;'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>在组件中，我们可以通过一下几种方式访问store的数据或者更改数据。</p>
+<blockquote>
+<p>访问状态：this.$store.state.属性名<br> 提交mutaions：this.$store.commit(“”, data.)<br> 提交actions：this.$store.dispatch(“”, data.)</p>
+</blockquote>
+<p> 例如在一个app.vue中，通过如下配置，可以添加一个mapState获取store里state属性。</p>
+<blockquote>
+<p>注：获取mutations,getter里面的属性，同样可以用mapMutations,mapGetter<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    name: <span class="string">"Home"</span>,</span><br><span class="line">    data() &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            m: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    computed:&#123;</span><br><span class="line">         mapState(&#123;</span><br><span class="line">                <span class="comment">// 写法1：箭头函数可使代码更简练</span></span><br><span class="line">                msg:<span class="function"><span class="params">state</span> =&gt;</span> state.msg,</span><br><span class="line">                <span class="comment">// 写法2：传字符串参数 'username' 等同于 `state =&gt; state.username`</span></span><br><span class="line">                username: <span class="string">"username"</span>,</span><br><span class="line">                <span class="comment">// 写法3：为了能够使用 `this` 获取局部状态，必须使用常规函数</span></span><br><span class="line">                sum(state) &#123;</span><br><span class="line">                    <span class="keyword">return</span> state.num + <span class="keyword">this</span>.m;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">            </span><br><span class="line">    <span class="comment">//        或者用扩展运算符</span></span><br><span class="line">    ...mapState(&#123;</span><br><span class="line">        <span class="string">'msg'</span>,</span><br><span class="line">        <span class="string">'username'</span>,</span><br><span class="line">        <span class="string">'num'</span></span><br><span class="line">    &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">               &#123;&#123;msg&#125;&#125;</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">              &#123;&#123;username&#125;&#125;</span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"> //编译之后，显示如下</span><br><span class="line"> <span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">         Hello, VueX</span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        admin</span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>同样，我们可以在组件里面修改msg的值，并提交给store</p>
+<blockquote>
+<p>this.$store.commit(‘realName’,’hell,world’)<br>注：commit是提交给mutations的。<br>这样store里面的msg的数据就变成了’hell,world’,而不是‘Hello, VueX’了。</p>
+</blockquote>
+<p>我们也可以通过dispatch提交给actions,然后action会提交给mutations，mutations再提交给state.</p>
+<blockquote>
+<p>this.$store.dispatch(“realName”, data.)</p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年06月14日 18:12</p>
+        <p>原始链接： <a class="post-url" href="/2019/04/25/vue/Vue04/" title="Vue常用语法(篇4)">https://fengjujiao.github.io/2019/04/25/vue/Vue04/</a></p>
+        <footer>
+            <a href="https://fengjujiao.github.io">
+                <img src="/images/logo.png" alt="慕少">
+                慕少
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengjujiao.github.io/2019/04/25/vue/Vue04/&title=《Vue常用语法(篇4)》 — 不安于命的博客&pic=/images/timg.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengjujiao.github.io/2019/04/25/vue/Vue04/&title=《Vue常用语法(篇4)》 — 不安于命的博客&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://fengjujiao.github.io/2019/04/25/vue/Vue04/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue常用语法(篇4)》 — 不安于命的博客&url=https://fengjujiao.github.io/2019/04/25/vue/Vue04/&via=https://fengjujiao.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://fengjujiao.github.io/2019/04/25/vue/Vue04/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://fengjujiao.github.io/2019/04/25/vue/Vue04/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、路由"><span class="post-toc-text">一、路由</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-安装"><span class="post-toc-text">1.安装</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Axios"><span class="post-toc-text">Axios</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-安装-1"><span class="post-toc-text">1.安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在main-js中引入"><span class="post-toc-text">在main.js中引入</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vuex（状态管理）"><span class="post-toc-text">Vuex（状态管理）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-安装-2"><span class="post-toc-text">1.安装</span></a></li></ol></li>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/04/25/Vue03/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Vue常用语法(篇3)
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/04/20/Vue02/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Vue常用语法(篇2)</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 慕少<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://fengjujiao.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 2
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Css/">Css</a><a class="category-link" href="/categories/Vue常用语法/">Vue常用语法</a><a class="category-link" href="/categories/初识/">初识</a><a class="category-link" href="/categories/骨架/">骨架</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>档案</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
